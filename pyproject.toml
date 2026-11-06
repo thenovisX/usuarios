@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "osint_finder"
+version = "0.1.0"
+description = "Enumeración OSINT de nombres de usuario en plataformas públicas (sin contraseñas)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = ["requests>=2.31,<3"]
+
+[project.scripts]
+osint-finder = "osint_finder.cli:main"
+
+[tool.setuptools]
+packages = ["osint_finder"]
